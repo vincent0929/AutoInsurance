@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item android:id="@+id/action_activity"-->
+        <!--android:title="@string/Activity"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="always"-->
+        <!--/>-->
+    <!--<item android:id="@+id/action_service"-->
+        <!--android:title="@string/Service"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="always" />-->
+    <!--<item android:id="@+id/action_vip"-->
+        <!--android:title="@string/Vip"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="always" />-->
+    <item android:id="@+id/action_choose_city"
+        android:title="@string/Shanghai"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>

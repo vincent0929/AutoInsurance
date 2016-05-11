@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:background">#545E6B</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/ToolBarMenuTextSiza</item>
+        <item name="selectableItemBackground">@drawable/toolbar_btn_bg</item>
+    </style>
+
+    <style name="ToolBarMenuTextSiza" parent="@style/TextAppearance.AppCompat.Menu">
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>
