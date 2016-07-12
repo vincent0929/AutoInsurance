@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本车险客户系统采用MVC架构设计，客户端基于Android平台开发，使用AndroidStudio作为开发工具；服务器后台使用php语言编写，采用PHPStorm作为开发工具；数据库使用的是MySql。在本系统中，Android客户端实现了普通用户订购车险、积分换购商品、接收车险公司发布的活动消息以及提供车险公司提供的各类服务等功能。后台管理系统实现了查看和发布活动消息，查看用户提交的订单，更改订单状态以及查看和录入各种信息进数据库等功能。
 ###APP主要功能模块  
 ####1.登录模块  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在该模块中，app首先会判断用户本地的token是否存在，若不存在则跳转到注册页面；若存在，则会判断本地的token是否过期，代码如下：   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在该模块中，app首先会判断用户本地的token是否存在，若不存在则跳转到注册页面；若存在，则会判断本地的token是否过期，**部分**代码如下：   
 ```Java
 new CheckTokenIsExpired(Config.getCachedPhoneNumberMD5(this), new CheckTokenIsExpired.SuccessCallback() {
                 @Override
@@ -46,7 +46,7 @@ String serverUrl = url + "?" + buffer.toString();
       }
   });
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在获得网络请求的返回值后，首先取得json数据中key为“status”的value，若为1，则表示请求数据成功，否则失败。 当请求成功时，首先根据传入的值resultDataType判断返回的数据是json数组还是字符串，若是json字符串则直接将字符串通过接口回调回去，若是json字符串，则根据要生成的bean的类名自动装配成Bean的列表并通过接口回调回去。自动装配Bean的*部分*代码如下：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在获得网络请求的返回值后，首先取得json数据中key为“status”的value，若为1，则表示请求数据成功，否则失败。 当请求成功时，首先根据传入的值resultDataType判断返回的数据是json数组还是字符串，若是json字符串则直接将字符串通过接口回调回去，若是json字符串，则根据要生成的bean的类名自动装配成Bean的列表并通过接口回调回去。自动装配Bean的**部分**代码如下：
 ```Java
 ClassLoader loader = Thread.currentThread().getContextClassLoader();
 Class clazz = loader.loadClass(className);
